@@ -1,7 +1,7 @@
 package crackingTheCodingInterview.DataStructure;
 
 public class LinkedList<T>{
-	Node<T> head = null;
+	public Node<T> head = null;
 	public void add(T data){
 		Node<T> t = new Node<T>(data);
 		if(head == null){
@@ -38,4 +38,19 @@ public class LinkedList<T>{
 		}
 		return DeletedNode;
 	}
+	public void print() {
+		Node<T> n = head;
+		if(head == null) {
+			System.out.println("Empty head");
+			return;
+		}
+		System.out.print(n.data);
+		while(n.next != null) {
+			System.out.print(n.next.data);
+			n = n.next;
+		}
+		System.out.println();
+
+	}
+
 }
