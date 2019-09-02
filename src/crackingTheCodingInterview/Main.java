@@ -15,11 +15,20 @@ public class Main {
 			LL.add(cur);
 		}
 		Problem2by2 p2by2 = new Problem2by2();
+		Problem2by3 p2by3 = new Problem2by3();
 
 		LL.print();
-		Node<String> ans = p2by2.FindBackKNode(LL.head,8);
-		System.out.println(ans.data);
+		p2by3.DeleteSpecificNode(LL.head.next.next);
 		LL.print();
+		int[] examInteger = {3,5,8,5,10,2,1};
 		
+		LinkedList<Integer> LLI = new LinkedList<Integer>();
+		for(Integer i : examInteger) {
+			LLI.add(i);
+		}
+		Problem2by4 p2by4 = new Problem2by4();
+		LLI = p2by4.DivisionByNodeData(LLI.head,5);
+		LLI.print();
+
 	}
 }

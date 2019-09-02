@@ -13,6 +13,8 @@ public class LinkedList<T>{
 				n = n.next;
 			}
 			n.next = t;	
+			n.next.prev = n;
+
 		}
 	}
 	public Node<T> delete(T data){
